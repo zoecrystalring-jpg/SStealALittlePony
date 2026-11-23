@@ -1,0 +1,44 @@
+{
+  "name": "PanelAction",
+  "tree": {
+    "$className": "ImageButton",
+    "$properties": {
+      "AnchorPoint": [0.5, 0.5],
+      "BackgroundTransparency": 0,
+      "Image": "",
+      "ScaleType": "Slice",
+      "SliceCenter": {
+        "Rect": [
+          [12, 12],
+          [151, 54]
+        ]
+      },
+      "SliceScale": 0.65,
+      "BackgroundColor3": [1.0, 0.960784, 0.913725],
+      "BorderSizePixel": 0
+    },
+    "Border": {
+      "$className": "UIStroke",
+      "$properties": {
+        "ApplyStrokeMode": "Border",
+        "Color": [0.74902, 0.670588, 0.72549],
+        "Thickness": 1.5,
+        "LineJoinMode": "Round"
+      }
+    },
+    "Corners": {
+      "$className": "UICorner",
+      "$properties": {
+        "CornerRadius": {
+          "UDim": [0, 9]
+        }
+      }
+    },
+    "HoverScale": {
+      "$className": "UIScale",
+      "$properties": {
+        "Scale": 1
+      }
+    }
+  }
+}

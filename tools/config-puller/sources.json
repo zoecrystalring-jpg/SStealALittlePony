@@ -1,0 +1,61 @@
+{
+  "outputDir": "src/shared/config",
+  "sourceDir": "configSource",
+  "tables": [
+    {
+      "name": "EggSpawnRegions",
+      "file": "EggSpawnRegions.csv",
+      "uniqueKey": "regionId",
+      "types": {
+        "regionId": "int",
+        "activeCount": "int",
+        "respawnSeconds": "int"
+      },
+      "outputPath": "src/server-storage/EggSpawn/EggSpawnRegions.lua",
+      "format": "luau",
+      "luauType": "EggSpawnRegion"
+    },
+    {
+      "name": "EggSpawnPool",
+      "file": "EggSpawnPool.csv",
+      "uniqueKey": "eggId",
+      "types": {
+        "regionId": "int",
+        "chancePercent": "number"
+      },
+      "outputPath": "src/server-storage/EggSpawn/EggSpawnPool.lua",
+      "format": "luau",
+      "luauType": "EggSpawnOption"
+    },
+    {
+      "name": "EggChaseRules",
+      "file": "EggChaseRules.csv",
+      "uniqueKey": "id",
+      "types": {
+        "id": "number",
+        "playerWalkSpeed": "number",
+        "holdSeconds": "number",
+        "reach": "number",
+        "attackRadius": "number",
+        "knockbackSpeed": "number",
+        "knockbackLift": "number",
+        "droppedLifetime": "number"
+      },
+      "outputPath": "src/server-storage/EggSpawn/EggChaseRules.lua",
+      "format": "luau",
+      "luauType": "EggChaseRulesRow"
+    },
+    {
+      "name": "EggGuardSpeeds",
+      "file": "EggGuardSpeeds.csv",
+      "uniqueKey": "regionId",
+      "types": {
+        "regionId": "number",
+        "guardSpeed": "number"
+      },
+      "outputPath": "src/server-storage/EggSpawn/EggGuardSpeeds.lua",
+      "format": "luau",
+      "luauType": "EggGuardSpeedsRow"
+    }
+  ]
+}

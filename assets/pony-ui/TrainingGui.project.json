@@ -1,0 +1,297 @@
+{
+  "name": "TrainingGui",
+  "tree": {
+    "$className": "ScreenGui",
+    "$properties": {
+      "Enabled": false,
+      "DisplayOrder": 30,
+      "ResetOnSpawn": false,
+      "ScreenInsets": "CoreUISafeInsets",
+      "ZIndexBehavior": "Sibling"
+    },
+    "CanvasGroup": {
+      "$className": "CanvasGroup",
+      "$properties": {
+        "AnchorPoint": [0.5, 0.5],
+        "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+        "Size": {"UDim2": [[1, 0], [1, 0]]},
+        "BackgroundTransparency": 1
+      },
+      "Scrim": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0.5, 0.5],
+          "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+          "Size": {"UDim2": [[1, 0], [1, 0]]},
+          "BackgroundTransparency": 0.38,
+          "BorderSizePixel": 0,
+          "BackgroundColor3": [0.219608, 0.172549, 0.282353],
+          "Active": true
+        }
+      },
+      "PanelRoot": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0.5, 0.5],
+          "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+          "Size": {"UDim2": [[0.91, 0], [0.86, 0]]},
+          "BackgroundTransparency": 0,
+          "BorderSizePixel": 0,
+          "BackgroundColor3": [1.0, 0.980392, 0.94902],
+          "ZIndex": 2
+        },
+        "Aspect": {
+          "$className": "UIAspectRatioConstraint",
+          "$properties": {
+            "AspectRatio": 1.75
+          }
+        },
+        "MotionScale": {
+          "$className": "UIScale",
+          "$properties": {
+            "Scale": 1
+          }
+        },
+        "Corners": {
+          "$className": "UICorner",
+          "$properties": {
+            "CornerRadius": {
+              "UDim": [0, 15]
+            }
+          }
+        },
+        "Rim": {
+          "$className": "UIStroke",
+          "$properties": {
+            "ApplyStrokeMode": "Border",
+            "Color": [0.509804, 0.670588, 0.607843],
+            "Thickness": 2,
+            "LineJoinMode": "Round"
+          }
+        },
+        "Header": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.085, 0]]},
+            "Size": {"UDim2": [[0.965, 0], [0.135, 0]]},
+            "BackgroundTransparency": 0,
+            "BorderSizePixel": 0,
+            "BackgroundColor3": [0.854902, 0.945098, 0.913725]
+          },
+          "Corners": {
+            "$className": "UICorner",
+            "$properties": {
+              "CornerRadius": {
+                "UDim": [0, 10]
+              }
+            }
+          },
+          "Title": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.485, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.79, 0], [0.66, 0]]},
+              "Text": "门口跑步机",
+              "TextXAlignment": "Left",
+              "TextColor3": [0.207843, 0.356863, 0.321569]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 48,
+                "MinTextSize": 1
+              }
+            }
+          },
+          "Rim": {
+            "$className": "UIStroke",
+            "$properties": {
+              "ApplyStrokeMode": "Border",
+              "Color": [0.509804, 0.670588, 0.607843],
+              "Thickness": 1.5,
+              "LineJoinMode": "Round"
+            }
+          },
+          "Illustration": {
+            "$className": "ImageLabel",
+            "$properties": {
+              "BackgroundTransparency": 1,
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.05, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.072, 0], [0.85, 0]]},
+              "Image": "https://assetdelivery.roblox.com/v1/asset/?id=121679571145091",
+              "ImageRectSize": [256, 256],
+              "ImageRectOffset": [0, 256],
+              "ScaleType": "Fit"
+            }
+          }
+        },
+        "CloseButton": {
+          "$path": "widgets/panel-close.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.94, 0], [0.083, 0]]},
+            "Size": {"UDim2": [[0.075, 0], [0.092, 0]]}
+          }
+        },
+        "Content": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+            "Size": {"UDim2": [[0.93, 0], [0.64, 0]]},
+            "BackgroundTransparency": 1,
+            "BorderSizePixel": 0
+          },
+          "MachineName": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.72, 0], [0.24, 0]]},
+              "Size": {"UDim2": [[0.49, 0], [0.17, 0]]},
+              "Text": "小马镇木制跑步机",
+              "TextColor3": [0.207843, 0.356863, 0.321569]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 40,
+                "MinTextSize": 1
+              }
+            }
+          },
+          "Speed": {
+            "$className": "Frame",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.72, 0], [0.53, 0]]},
+              "Size": {"UDim2": [[0.44, 0], [0.22, 0]]},
+              "BackgroundTransparency": 0,
+              "BorderSizePixel": 0,
+              "BackgroundColor3": [0.854902, 0.945098, 0.913725]
+            },
+            "Aspect": {
+              "$className": "UIAspectRatioConstraint",
+              "$properties": {
+                "AspectRatio": 5
+              }
+            },
+            "Corners": {
+              "$className": "UICorner",
+              "$properties": {
+                "CornerRadius": {
+                  "UDim": [0, 10]
+                }
+              }
+            },
+            "Caption": {
+              "$path": "widgets/panel-label.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.88, 0], [0.7, 0]]},
+                "Text": "基础速度　0",
+                "TextColor3": [0.388235, 0.337255, 0.415686]
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 26,
+                  "MinTextSize": 1
+                }
+              }
+            },
+            "Rim": {
+              "$className": "UIStroke",
+              "$properties": {
+                "ApplyStrokeMode": "Border",
+                "Color": [0.509804, 0.670588, 0.607843],
+                "Thickness": 1.5,
+                "LineJoinMode": "Round"
+              }
+            }
+          },
+          "Gain": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.72, 0], [0.77, 0]]},
+              "Size": {"UDim2": [[0.49, 0], [0.13, 0]]},
+              "Text": "本次训练　+20 基础速度",
+              "TextColor3": [0.207843, 0.356863, 0.321569]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 26,
+                "MinTextSize": 1
+              }
+            }
+          },
+          "Illustration": {
+            "$className": "ImageLabel",
+            "$properties": {
+              "BackgroundTransparency": 1,
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.255, 0], [0.49, 0]]},
+              "Size": {"UDim2": [[0.44, 0], [0.79, 0]]},
+              "Image": "https://assetdelivery.roblox.com/v1/asset/?id=121679571145091",
+              "ImageRectSize": [256, 256],
+              "ImageRectOffset": [0, 256],
+              "ScaleType": "Fit"
+            }
+          }
+        },
+        "Actions": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.902, 0]]},
+            "Size": {"UDim2": [[0.93, 0], [0.105, 0]]},
+            "BackgroundTransparency": 1,
+            "BorderSizePixel": 0
+          },
+          "Layout": {
+            "$className": "UIListLayout",
+            "$properties": {
+              "FillDirection": "Horizontal",
+              "HorizontalAlignment": "Center",
+              "VerticalAlignment": "Center",
+              "SortOrder": "LayoutOrder",
+              "Padding": {
+                "UDim": [0.016, 0]
+              }
+            }
+          },
+          "Train": {
+            "$path": "widgets/panel-action.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.45, 0], [0.9, 0]]},
+              "LayoutOrder": 1,
+              "BackgroundColor3": [0.854902, 0.945098, 0.913725]
+            },
+            "Caption": {
+              "$path": "widgets/plain-label.project.json",
+              "$properties": {
+                "Text": "训练一次",
+                "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                "TextColor3": [0.207843, 0.356863, 0.321569]
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 30,
+                  "MinTextSize": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

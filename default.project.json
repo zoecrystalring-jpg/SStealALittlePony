@@ -1,0 +1,114 @@
+{
+  "name": "StealALittlePony",
+  "servePort": 34873,
+  "globIgnorePaths": [
+    "**/*.spec.lua",
+    "**/.DS_Store"
+  ],
+  "tree": {
+    "$className": "DataModel",
+    "Workspace": {
+      "$className": "Workspace",
+      "Scripts": {
+        "$path": "src/workspace"
+      },
+      "PonyEggScene": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "$attributes": {
+          "RouteAxis": "+X",
+          "FieldWidth": 144,
+          "HomeCapacity": 8,
+          "Phase": "ReferenceMapPreset",
+          "RegionLength": 192,
+          "RegionCount": 12
+        },
+        "Regions": {
+          "$path": "assets/egg-spawns/Regions.project.json"
+        },
+        "ReferenceHomeCourt": {
+          "$className": "Folder",
+          "$ignoreUnknownInstances": true,
+          "SafeBoundary": {
+            "$path": "assets/egg-spawns/SafeBoundary.rbxm"
+          }
+        }
+      }
+    },
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Scripts": {
+        "$path": "src/shared"
+      }
+    },
+    "ReplicatedFirst": {
+      "$className": "ReplicatedFirst",
+      "Scripts": {
+        "$path": "src/replicated-first"
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "Scripts": {
+        "$path": "src/server"
+      }
+    },
+    "ServerStorage": {
+      "$className": "ServerStorage",
+      "Scripts": {
+        "$path": "src/server-storage"
+      }
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "Scripts": {
+          "$path": "src/client"
+        }
+      }
+    },
+    "StarterGui": {
+      "$className": "StarterGui",
+      "Scripts": {
+        "$path": "src/gui"
+      },
+      "ActivePoniesGui": {
+        "$path": "assets/pony-ui/ActivePoniesGui.project.json"
+      },
+      "currencyGui": {
+        "$path": "assets/pony-ui/currencyGui.project.json"
+      },
+      "GrowingEggsGui": {
+        "$path": "assets/pony-ui/GrowingEggsGui.project.json"
+      },
+      "MainGui": {
+        "$path": "assets/pony-ui/MainGui.project.json"
+      },
+      "PonyIndexGui": {
+        "$path": "assets/pony-ui/PonyIndexGui.project.json"
+      },
+      "PonyYardGui": {
+        "$path": "assets/pony-ui/PonyYardGui.project.json"
+      },
+      "SellPoniesGui": {
+        "$path": "assets/pony-ui/SellPoniesGui.project.json"
+      },
+      "ShopGui": {
+        "$path": "assets/pony-ui/ShopGui.project.json"
+      },
+      "TrailsGui": {
+        "$path": "assets/pony-ui/TrailsGui.project.json"
+      },
+      "TrainingGui": {
+        "$path": "assets/pony-ui/TrainingGui.project.json"
+      },
+      "WorldMapGui": {
+        "$path": "assets/pony-ui/WorldMapGui.project.json"
+      },
+      "EggChaseGui": {
+        "$path": "assets/pony-ui/EggChaseGui.project.json"
+      }
+    }
+  }
+}

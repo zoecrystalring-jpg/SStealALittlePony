@@ -1,0 +1,286 @@
+{
+  "name": "ShopGui",
+  "tree": {
+    "$className": "ScreenGui",
+    "$properties": {
+      "Enabled": false,
+      "DisplayOrder": 30,
+      "ResetOnSpawn": false,
+      "ScreenInsets": "CoreUISafeInsets",
+      "ZIndexBehavior": "Sibling"
+    },
+    "CanvasGroup": {
+      "$className": "CanvasGroup",
+      "$properties": {
+        "AnchorPoint": [0.5, 0.5],
+        "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+        "Size": {"UDim2": [[1, 0], [1, 0]]},
+        "BackgroundTransparency": 1
+      },
+      "Scrim": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0.5, 0.5],
+          "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+          "Size": {"UDim2": [[1, 0], [1, 0]]},
+          "BackgroundTransparency": 0.38,
+          "BorderSizePixel": 0,
+          "BackgroundColor3": [0.219608, 0.172549, 0.282353],
+          "Active": true
+        }
+      },
+      "PanelRoot": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0.5, 0.5],
+          "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+          "Size": {"UDim2": [[0.91, 0], [0.86, 0]]},
+          "BackgroundTransparency": 0,
+          "BorderSizePixel": 0,
+          "BackgroundColor3": [1.0, 0.980392, 0.94902],
+          "ZIndex": 2
+        },
+        "Aspect": {
+          "$className": "UIAspectRatioConstraint",
+          "$properties": {
+            "AspectRatio": 1.75
+          }
+        },
+        "MotionScale": {
+          "$className": "UIScale",
+          "$properties": {
+            "Scale": 1
+          }
+        },
+        "Corners": {
+          "$className": "UICorner",
+          "$properties": {
+            "CornerRadius": {
+              "UDim": [0, 15]
+            }
+          }
+        },
+        "Rim": {
+          "$className": "UIStroke",
+          "$properties": {
+            "ApplyStrokeMode": "Border",
+            "Color": [0.788235, 0.576471, 0.427451],
+            "Thickness": 2,
+            "LineJoinMode": "Round"
+          }
+        },
+        "Header": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.085, 0]]},
+            "Size": {"UDim2": [[0.965, 0], [0.135, 0]]},
+            "BackgroundTransparency": 0,
+            "BorderSizePixel": 0,
+            "BackgroundColor3": [1.0, 0.905882, 0.796078]
+          },
+          "Corners": {
+            "$className": "UICorner",
+            "$properties": {
+              "CornerRadius": {
+                "UDim": [0, 10]
+              }
+            }
+          },
+          "Title": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.485, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.79, 0], [0.66, 0]]},
+              "Text": "广场商店",
+              "TextXAlignment": "Left",
+              "TextColor3": [0.419608, 0.270588, 0.207843]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 48,
+                "MinTextSize": 1
+              }
+            }
+          },
+          "Rim": {
+            "$className": "UIStroke",
+            "$properties": {
+              "ApplyStrokeMode": "Border",
+              "Color": [0.788235, 0.576471, 0.427451],
+              "Thickness": 1.5,
+              "LineJoinMode": "Round"
+            }
+          },
+          "Illustration": {
+            "$className": "ImageLabel",
+            "$properties": {
+              "BackgroundTransparency": 1,
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.05, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.072, 0], [0.85, 0]]},
+              "Image": "rbxassetid://81406360991970",
+              "ImageRectSize": [256, 256],
+              "ImageRectOffset": [0, 0],
+              "ScaleType": "Fit"
+            }
+          }
+        },
+        "CloseButton": {
+          "$path": "widgets/panel-close.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.94, 0], [0.083, 0]]},
+            "Size": {"UDim2": [[0.075, 0], [0.092, 0]]}
+          }
+        },
+        "Content": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.555, 0]]},
+            "Size": {"UDim2": [[0.93, 0], [0.69, 0]]},
+            "BackgroundTransparency": 1,
+            "BorderSizePixel": 0
+          },
+          "Sell": {
+            "$path": "widgets/panel-action.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.275, 0], [0.47, 0]]},
+              "Size": {"UDim2": [[0.41, 0], [0.8, 0]]},
+              "LayoutOrder": 1,
+              "BackgroundColor3": [0.980392, 0.890196, 0.847059]
+            },
+            "Caption": {
+              "$path": "widgets/plain-label.project.json",
+              "$properties": {
+                "Text": "出售小马",
+                "Size": {"UDim2": [[0.92, 0], [0.2, 0]]},
+                "TextColor3": [0.419608, 0.270588, 0.207843],
+                "Position": {"UDim2": [[0.5, 0], [0.82, 0]]}
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 42,
+                  "MinTextSize": 1
+                }
+              }
+            },
+            "Illustration": {
+              "$className": "ImageLabel",
+              "$properties": {
+                "BackgroundTransparency": 1,
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.38, 0]]},
+                "Size": {"UDim2": [[0.71, 0], [0.6, 0]]},
+                "Image": "https://assetdelivery.roblox.com/v1/asset/?id=121679571145091",
+                "ImageRectSize": [256, 256],
+                "ImageRectOffset": [0, 0],
+                "ScaleType": "Fit"
+              }
+            }
+          },
+          "Trails": {
+            "$path": "widgets/panel-action.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.725, 0], [0.47, 0]]},
+              "Size": {"UDim2": [[0.41, 0], [0.8, 0]]},
+              "LayoutOrder": 1,
+              "BackgroundColor3": [0.917647, 0.890196, 0.968627]
+            },
+            "Caption": {
+              "$path": "widgets/plain-label.project.json",
+              "$properties": {
+                "Text": "踪迹商店",
+                "Size": {"UDim2": [[0.92, 0], [0.2, 0]]},
+                "TextColor3": [0.419608, 0.270588, 0.207843],
+                "Position": {"UDim2": [[0.5, 0], [0.82, 0]]}
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 42,
+                  "MinTextSize": 1
+                }
+              }
+            },
+            "Illustration": {
+              "$className": "ImageLabel",
+              "$properties": {
+                "BackgroundTransparency": 1,
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.38, 0]]},
+                "Size": {"UDim2": [[0.71, 0], [0.6, 0]]},
+                "Image": "https://assetdelivery.roblox.com/v1/asset/?id=121679571145091",
+                "ImageRectSize": [256, 256],
+                "ImageRectOffset": [256, 0],
+                "ScaleType": "Fit"
+              }
+            }
+          },
+          "SellNote": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.275, 0], [0.965, 0]]},
+              "Size": {"UDim2": [[0.42, 0], [0.08, 0]]},
+              "Text": "按重量或价值选售",
+              "TextColor3": [0.388235, 0.337255, 0.415686]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 26,
+                "MinTextSize": 1
+              }
+            }
+          },
+          "TrailNote": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.725, 0], [0.965, 0]]},
+              "Size": {"UDim2": [[0.42, 0], [0.08, 0]]},
+              "Text": "查看移动速度倍率",
+              "TextColor3": [0.388235, 0.337255, 0.415686]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 26,
+                "MinTextSize": 1
+              }
+            }
+          }
+        },
+        "Actions": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.902, 0]]},
+            "Size": {"UDim2": [[0.93, 0], [0.105, 0]]},
+            "BackgroundTransparency": 1,
+            "BorderSizePixel": 0
+          },
+          "Layout": {
+            "$className": "UIListLayout",
+            "$properties": {
+              "FillDirection": "Horizontal",
+              "HorizontalAlignment": "Center",
+              "VerticalAlignment": "Center",
+              "SortOrder": "LayoutOrder",
+              "Padding": {
+                "UDim": [0.016, 0]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

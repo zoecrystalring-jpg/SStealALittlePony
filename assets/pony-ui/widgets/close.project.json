@@ -1,0 +1,1 @@
+{"name":"CloseButton","tree":{"$className":"ImageButton","$properties":{"BackgroundTransparency":1,"AnchorPoint":[0.5,0.5],"Image":"rbxassetid://90628077666694","ScaleType":"Fit","ZIndex":5},"Aspect":{"$className":"UIAspectRatioConstraint","$properties":{"AspectRatio":1.013}}}}

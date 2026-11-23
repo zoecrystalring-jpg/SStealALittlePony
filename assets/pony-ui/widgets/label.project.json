@@ -1,0 +1,27 @@
+{
+  "name": "Label",
+  "tree": {
+    "$className": "TextLabel",
+    "$properties": {
+      "BackgroundTransparency": 1,
+      "AnchorPoint": [0.5, 0.5],
+      "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+      "Size": {"UDim2": [[1, 0], [1, 0]]},
+      "Font": "GothamBold",
+      "TextColor3": [1, 1, 1],
+      "TextScaled": true,
+      "TextWrapped": true,
+      "Text": "",
+      "BorderSizePixel": 0
+    },
+    "Outline": {
+      "$className": "UIStroke",
+      "$properties": {
+        "Thickness": 1,
+        "Color": [0.055, 0.048, 0.075],
+        "LineJoinMode": "Round",
+        "Transparency": 0.18
+      }
+    }
+  }
+}

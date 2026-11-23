@@ -1,0 +1,12 @@
+{
+  "name": "action",
+  "tree": {
+    "$path": "button.project.json",
+    "HoverScale": {
+      "$className": "UIScale",
+      "$properties": {
+        "Scale": 1
+      }
+    }
+  }
+}

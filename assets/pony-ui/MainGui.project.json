@@ -1,0 +1,684 @@
+{
+  "name": "MainGui",
+  "tree": {
+    "$className": "ScreenGui",
+    "$properties": {
+      "Enabled": true,
+      "DisplayOrder": 2,
+      "ResetOnSpawn": false,
+      "ScreenInsets": "CoreUISafeInsets",
+      "ZIndexBehavior": "Sibling"
+    },
+    "Root": {
+      "$className": "Frame",
+      "$properties": {
+        "AnchorPoint": [0.5, 0.5],
+        "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+        "Size": {"UDim2": [[1, 0], [1, 0]]},
+        "BackgroundTransparency": 1,
+        "BorderSizePixel": 0
+      },
+      "TopRegion": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0.5, 0],
+          "Position": {"UDim2": [[0.5, 0], [0, 0]]},
+          "Size": {"UDim2": [[0.6, 0], [0.18, 0]]},
+          "BackgroundTransparency": 1
+        },
+        "Location": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+            "Size": {"UDim2": [[0.58, 0], [0.49, 0]]},
+            "BackgroundTransparency": 0,
+            "BorderSizePixel": 0,
+            "BackgroundColor3": [0.24, 0.16, 0.32],
+            "Visible": false
+          },
+          "Aspect": {
+            "$className": "UIAspectRatioConstraint",
+            "$properties": {
+              "AspectRatio": 4.8
+            }
+          },
+          "Corners": {
+            "$className": "UICorner",
+            "$properties": {
+              "CornerRadius": {
+                "UDim": [0.16, 0]
+              }
+            }
+          },
+          "Caption": {
+            "$path": "widgets/label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.88, 0], [0.7, 0]]},
+              "Text": "我的家园"
+            }
+          }
+        },
+        "ChaseAlert": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.79, 0]]},
+            "Size": {"UDim2": [[0.78, 0], [0.39, 0]]},
+            "BackgroundTransparency": 0,
+            "BorderSizePixel": 0,
+            "BackgroundColor3": [0.24, 0.16, 0.32],
+            "Visible": false
+          },
+          "Aspect": {
+            "$className": "UIAspectRatioConstraint",
+            "$properties": {
+              "AspectRatio": 6.4
+            }
+          },
+          "Corners": {
+            "$className": "UICorner",
+            "$properties": {
+              "CornerRadius": {
+                "UDim": [0.16, 0]
+              }
+            }
+          },
+          "Caption": {
+            "$path": "widgets/label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.6, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.7, 0], [0.61, 0]]},
+              "Text": "守卫正在追赶你！"
+            }
+          },
+          "Art": {
+            "$path": "widgets/icon.project.json",
+            "$properties": {
+              "Image": "rbxassetid://80791918172185",
+              "Position": {"UDim2": [[0.16, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.22, 0], [0.8, 0]]},
+              "ImageRectOffset": [0, 0],
+              "ImageRectSize": [256, 256]
+            },
+            "Aspect": {
+              "$className": "UIAspectRatioConstraint",
+              "$properties": {
+                "AspectRatio": 1
+              }
+            }
+          }
+        }
+      },
+      "LeftRegion": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0, 0.5],
+          "Position": {"UDim2": [[0.013, 0], [0.49, 0]]},
+          "Size": {"UDim2": [[0.135, 0], [0.24, 0]]},
+          "BackgroundTransparency": 1
+        },
+        "Menu": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+            "Size": {"UDim2": [[0.91, 0], [0.96, 0]]},
+            "BackgroundTransparency": 1,
+            "BorderSizePixel": 0
+          },
+          "Layout": {
+            "$className": "UIListLayout",
+            "$properties": {
+              "FillDirection": "Vertical",
+              "HorizontalAlignment": "Center",
+              "VerticalAlignment": "Center",
+              "SortOrder": "LayoutOrder",
+              "Padding": {
+                "UDim": [0.079, 0]
+              }
+            }
+          },
+          "Shop": {
+            "$path": "widgets/hud-button.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.96, 0], [0.26, 0]]},
+              "LayoutOrder": 1,
+              "BackgroundColor3": [1.0, 0.9059, 0.7961]
+            },
+            "Caption": {
+              "$path": "widgets/plain-label.project.json",
+              "$properties": {
+                "Text": "商店",
+                "Size": {"UDim2": [[0.59, 0], [0.59, 0]]},
+                "TextColor3": [0.4196, 0.2706, 0.2078],
+                "Position": {"UDim2": [[0.655, 0], [0.5, 0]]}
+              }
+            },
+            "Aspect": {
+              "$className": "UIAspectRatioConstraint",
+              "$properties": {
+                "AspectRatio": 3.25
+              }
+            },
+            "Art": {
+              "$path": "widgets/icon.project.json",
+              "$properties": {
+                "Image": "rbxassetid://81406360991970",
+                "Position": {"UDim2": [[0.205, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.31, 0], [0.9, 0]]},
+                "ImageRectSize": [256, 256],
+                "ImageRectOffset": [0, 0]
+              },
+              "Aspect": {
+                "$className": "UIAspectRatioConstraint",
+                "$properties": {
+                  "AspectRatio": 1
+                }
+              }
+            },
+            "Border": {
+              "$className": "UIStroke",
+              "$properties": {
+                "ApplyStrokeMode": "Border",
+                "LineJoinMode": "Round",
+                "Color": [0.7882, 0.5765, 0.4275],
+                "Thickness": 1.65,
+                "Transparency": 0.08
+              }
+            }
+          },
+          "Index": {
+            "$path": "widgets/hud-button.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.96, 0], [0.26, 0]]},
+              "LayoutOrder": 2,
+              "BackgroundColor3": [0.9176, 0.898, 1.0]
+            },
+            "Caption": {
+              "$path": "widgets/plain-label.project.json",
+              "$properties": {
+                "Text": "图鉴",
+                "Size": {"UDim2": [[0.59, 0], [0.59, 0]]},
+                "TextColor3": [0.3255, 0.2627, 0.4157],
+                "Position": {"UDim2": [[0.655, 0], [0.5, 0]]}
+              }
+            },
+            "Aspect": {
+              "$className": "UIAspectRatioConstraint",
+              "$properties": {
+                "AspectRatio": 3.25
+              }
+            },
+            "Art": {
+              "$path": "widgets/icon.project.json",
+              "$properties": {
+                "Image": "rbxassetid://81406360991970",
+                "Position": {"UDim2": [[0.205, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.31, 0], [0.9, 0]]},
+                "ImageRectSize": [256, 256],
+                "ImageRectOffset": [256, 0]
+              },
+              "Aspect": {
+                "$className": "UIAspectRatioConstraint",
+                "$properties": {
+                  "AspectRatio": 1
+                }
+              }
+            },
+            "Border": {
+              "$className": "UIStroke",
+              "$properties": {
+                "ApplyStrokeMode": "Border",
+                "LineJoinMode": "Round",
+                "Color": [0.6039, 0.5255, 0.7412],
+                "Thickness": 1.65,
+                "Transparency": 0.08
+              }
+            }
+          },
+          "SlowMode": {
+            "$path": "widgets/hud-button.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.96, 0], [0.26, 0]]},
+              "LayoutOrder": 3,
+              "BackgroundColor3": [0.8863, 0.9529, 0.851]
+            },
+            "Caption": {
+              "$path": "widgets/plain-label.project.json",
+              "$properties": {
+                "Text": "慢模式",
+                "Size": {"UDim2": [[0.59, 0], [0.59, 0]]},
+                "TextColor3": [0.2549, 0.3647, 0.2588],
+                "Position": {"UDim2": [[0.655, 0], [0.5, 0]]}
+              }
+            },
+            "Aspect": {
+              "$className": "UIAspectRatioConstraint",
+              "$properties": {
+                "AspectRatio": 3.25
+              }
+            },
+            "Art": {
+              "$path": "widgets/icon.project.json",
+              "$properties": {
+                "Image": "rbxassetid://81406360991970",
+                "Position": {"UDim2": [[0.205, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.31, 0], [0.9, 0]]},
+                "ImageRectSize": [256, 256],
+                "ImageRectOffset": [512, 0]
+              },
+              "Aspect": {
+                "$className": "UIAspectRatioConstraint",
+                "$properties": {
+                  "AspectRatio": 1
+                }
+              }
+            },
+            "Border": {
+              "$className": "UIStroke",
+              "$properties": {
+                "ApplyStrokeMode": "Border",
+                "LineJoinMode": "Round",
+                "Color": [0.549, 0.6745, 0.5059],
+                "Thickness": 1.65,
+                "Transparency": 0.08
+              }
+            }
+          }
+        }
+      },
+      "RightRegion": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [1, 0.5],
+          "Position": {"UDim2": [[0.985, 0], [0.49, 0]]},
+          "Size": {"UDim2": [[0.068, 0], [0.2, 0]]},
+          "BackgroundTransparency": 1
+        },
+        "Shortcuts": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+            "Size": {"UDim2": [[0.94, 0], [1, 0]]},
+            "BackgroundTransparency": 1,
+            "BorderSizePixel": 0
+          },
+          "Layout": {
+            "$className": "UIListLayout",
+            "$properties": {
+              "FillDirection": "Vertical",
+              "HorizontalAlignment": "Center",
+              "VerticalAlignment": "Center",
+              "SortOrder": "LayoutOrder",
+              "Padding": {
+                "UDim": [0.085, 0]
+              }
+            }
+          },
+          "Eggs": {
+            "$path": "widgets/hud-button.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.94, 0], [0.42, 0]]},
+              "LayoutOrder": 1,
+              "BackgroundColor3": [1.0, 0.9412, 0.8471]
+            },
+            "Caption": {
+              "$path": "widgets/label.project.json",
+              "$properties": {
+                "Text": "成长中的蛋",
+                "Size": {"UDim2": [[0.7, 0], [0.61, 0]]},
+                "Position": {"UDim2": [[0.6, 0], [0.5, 0]]},
+                "Visible": false
+              }
+            },
+            "Aspect": {
+              "$className": "UIAspectRatioConstraint",
+              "$properties": {
+                "AspectRatio": 1
+              }
+            },
+            "Art": {
+              "$path": "widgets/icon.project.json",
+              "$properties": {
+                "Image": "rbxassetid://81406360991970",
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.89, 0], [0.89, 0]]},
+                "ImageRectSize": [256, 256],
+                "ImageRectOffset": [0, 256]
+              },
+              "Aspect": {
+                "$className": "UIAspectRatioConstraint",
+                "$properties": {
+                  "AspectRatio": 1
+                }
+              }
+            },
+            "Border": {
+              "$className": "UIStroke",
+              "$properties": {
+                "ApplyStrokeMode": "Border",
+                "LineJoinMode": "Round",
+                "Color": [0.7961, 0.6314, 0.4196],
+                "Thickness": 1.65,
+                "Transparency": 0.08
+              }
+            }
+          },
+          "Active": {
+            "$path": "widgets/hud-button.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.94, 0], [0.42, 0]]},
+              "LayoutOrder": 2,
+              "BackgroundColor3": [0.9882, 0.8941, 0.9216]
+            },
+            "Caption": {
+              "$path": "widgets/label.project.json",
+              "$properties": {
+                "Text": "活跃小马",
+                "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                "Visible": false
+              }
+            },
+            "Aspect": {
+              "$className": "UIAspectRatioConstraint",
+              "$properties": {
+                "AspectRatio": 1
+              }
+            },
+            "Art": {
+              "$path": "widgets/icon.project.json",
+              "$properties": {
+                "Image": "rbxassetid://81406360991970",
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.89, 0], [0.89, 0]]},
+                "ImageRectSize": [256, 256],
+                "ImageRectOffset": [256, 256]
+              },
+              "Aspect": {
+                "$className": "UIAspectRatioConstraint",
+                "$properties": {
+                  "AspectRatio": 1
+                }
+              }
+            },
+            "Border": {
+              "$className": "UIStroke",
+              "$properties": {
+                "ApplyStrokeMode": "Border",
+                "LineJoinMode": "Round",
+                "Color": [0.7294, 0.5451, 0.6588],
+                "Thickness": 1.65,
+                "Transparency": 0.08
+              }
+            }
+          }
+        }
+      },
+      "BottomRegion": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0.5, 1],
+          "Position": {"UDim2": [[0.5, 0], [1, 0]]},
+          "Size": {"UDim2": [[0.54, 0], [0.24, 0]]},
+          "BackgroundTransparency": 1
+        },
+        "CarryStatus": {
+          "$path": "widgets/label.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.13, 0]]},
+            "Size": {"UDim2": [[0.78, 0], [0.2, 0]]},
+            "Text": "携带：苹果嘉儿蛋",
+            "Visible": false
+          }
+        },
+        "PlaceEgg": {
+          "$path": "widgets/hud-button.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.48, 0]]},
+            "Size": {"UDim2": [[0.52, 0], [0.32, 0]]},
+            "Visible": false,
+            "BackgroundColor3": [0.9804, 0.9255, 0.851]
+          },
+          "Caption": {
+            "$path": "widgets/label.project.json",
+            "$properties": {
+              "Text": "放进自己的围栏",
+              "Size": {"UDim2": [[0.86, 0], [0.62, 0]]}
+            }
+          },
+          "Aspect": {
+            "$className": "UIAspectRatioConstraint",
+            "$properties": {
+              "AspectRatio": 5
+            }
+          },
+          "Border": {
+            "$className": "UIStroke",
+            "$properties": {
+              "ApplyStrokeMode": "Border",
+              "LineJoinMode": "Round",
+              "Color": [0.7333, 0.6392, 0.5294],
+              "Thickness": 1.65,
+              "Transparency": 0.08
+            }
+          }
+        },
+        "TakeEgg": {
+          "$path": "widgets/hud-button.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.48, 0]]},
+            "Size": {"UDim2": [[0.52, 0], [0.32, 0]]},
+            "Visible": false,
+            "BackgroundColor3": [0.9804, 0.9255, 0.851]
+          },
+          "Caption": {
+            "$path": "widgets/label.project.json",
+            "$properties": {
+              "Text": "从蛋巢取蛋",
+              "Size": {"UDim2": [[0.86, 0], [0.62, 0]]}
+            }
+          },
+          "Aspect": {
+            "$className": "UIAspectRatioConstraint",
+            "$properties": {
+              "AspectRatio": 5
+            }
+          },
+          "Border": {
+            "$className": "UIStroke",
+            "$properties": {
+              "ApplyStrokeMode": "Border",
+              "LineJoinMode": "Round",
+              "Color": [0.7333, 0.6392, 0.5294],
+              "Thickness": 1.65,
+              "Transparency": 0.08
+            }
+          }
+        },
+        "DropNotice": {
+          "$path": "widgets/label.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.14, 0]]},
+            "Size": {"UDim2": [[0.89, 0], [0.24, 0]]},
+            "Text": "被守卫击飞，蛋掉在地上了",
+            "TextColor3": [1, 0.83, 0.5],
+            "Visible": false
+          }
+        },
+        "Train": {
+          "$path": "widgets/hud-button.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.48, 0]]},
+            "Size": {"UDim2": [[0.52, 0], [0.32, 0]]},
+            "Visible": false,
+            "BackgroundColor3": [0.9804, 0.9255, 0.851]
+          },
+          "Caption": {
+            "$path": "widgets/label.project.json",
+            "$properties": {
+              "Text": "在门口训练",
+              "Size": {"UDim2": [[0.86, 0], [0.62, 0]]}
+            }
+          },
+          "Aspect": {
+            "$className": "UIAspectRatioConstraint",
+            "$properties": {
+              "AspectRatio": 5
+            }
+          },
+          "Border": {
+            "$className": "UIStroke",
+            "$properties": {
+              "ApplyStrokeMode": "Border",
+              "LineJoinMode": "Round",
+              "Color": [0.7333, 0.6392, 0.5294],
+              "Thickness": 1.65,
+              "Transparency": 0.08
+            }
+          }
+        },
+        "OpenYard": {
+          "$path": "widgets/hud-button.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.48, 0]]},
+            "Size": {"UDim2": [[0.52, 0], [0.32, 0]]},
+            "Visible": false,
+            "BackgroundColor3": [0.9804, 0.9255, 0.851]
+          },
+          "Caption": {
+            "$path": "widgets/label.project.json",
+            "$properties": {
+              "Text": "查看我的围栏",
+              "Size": {"UDim2": [[0.86, 0], [0.62, 0]]}
+            }
+          },
+          "Aspect": {
+            "$className": "UIAspectRatioConstraint",
+            "$properties": {
+              "AspectRatio": 5
+            }
+          },
+          "Border": {
+            "$className": "UIStroke",
+            "$properties": {
+              "ApplyStrokeMode": "Border",
+              "LineJoinMode": "Round",
+              "Color": [0.7333, 0.6392, 0.5294],
+              "Thickness": 1.65,
+              "Transparency": 0.08
+            }
+          }
+        },
+        "OpenSell": {
+          "$path": "widgets/hud-button.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.48, 0]]},
+            "Size": {"UDim2": [[0.52, 0], [0.32, 0]]},
+            "Visible": false,
+            "BackgroundColor3": [0.9804, 0.9255, 0.851]
+          },
+          "Caption": {
+            "$path": "widgets/label.project.json",
+            "$properties": {
+              "Text": "出售小马",
+              "Size": {"UDim2": [[0.86, 0], [0.62, 0]]}
+            }
+          },
+          "Aspect": {
+            "$className": "UIAspectRatioConstraint",
+            "$properties": {
+              "AspectRatio": 5
+            }
+          },
+          "Border": {
+            "$className": "UIStroke",
+            "$properties": {
+              "ApplyStrokeMode": "Border",
+              "LineJoinMode": "Round",
+              "Color": [0.7333, 0.6392, 0.5294],
+              "Thickness": 1.65,
+              "Transparency": 0.08
+            }
+          }
+        },
+        "OpenTrailShop": {
+          "$path": "widgets/hud-button.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.48, 0]]},
+            "Size": {"UDim2": [[0.52, 0], [0.32, 0]]},
+            "Visible": false,
+            "BackgroundColor3": [0.9804, 0.9255, 0.851]
+          },
+          "Caption": {
+            "$path": "widgets/label.project.json",
+            "$properties": {
+              "Text": "查看踪迹",
+              "Size": {"UDim2": [[0.86, 0], [0.62, 0]]}
+            }
+          },
+          "Aspect": {
+            "$className": "UIAspectRatioConstraint",
+            "$properties": {
+              "AspectRatio": 5
+            }
+          },
+          "Border": {
+            "$className": "UIStroke",
+            "$properties": {
+              "ApplyStrokeMode": "Border",
+              "LineJoinMode": "Round",
+              "Color": [0.7333, 0.6392, 0.5294],
+              "Thickness": 1.65,
+              "Transparency": 0.08
+            }
+          }
+        },
+        "HatchNotice": {
+          "$path": "widgets/label.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.14, 0]]},
+            "Size": {"UDim2": [[0.89, 0], [0.24, 0]]},
+            "Text": "小马已入住你的围栏",
+            "TextColor3": [1, 0.83, 0.5],
+            "Visible": false
+          }
+        },
+        "TrainingNotice": {
+          "$path": "widgets/label.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.14, 0]]},
+            "Size": {"UDim2": [[0.89, 0], [0.24, 0]]},
+            "Text": "训练完成，基础速度提升",
+            "TextColor3": [1, 0.83, 0.5],
+            "Visible": false
+          }
+        }
+      }
+    }
+  }
+}

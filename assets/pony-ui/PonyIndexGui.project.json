@@ -1,0 +1,669 @@
+{
+  "name": "PonyIndexGui",
+  "tree": {
+    "$className": "ScreenGui",
+    "$properties": {
+      "Enabled": false,
+      "DisplayOrder": 30,
+      "ResetOnSpawn": false,
+      "ScreenInsets": "CoreUISafeInsets",
+      "ZIndexBehavior": "Sibling"
+    },
+    "CanvasGroup": {
+      "$className": "CanvasGroup",
+      "$properties": {
+        "AnchorPoint": [0.5, 0.5],
+        "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+        "Size": {"UDim2": [[1, 0], [1, 0]]},
+        "BackgroundTransparency": 1
+      },
+      "Scrim": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0.5, 0.5],
+          "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+          "Size": {"UDim2": [[1, 0], [1, 0]]},
+          "BackgroundTransparency": 0.38,
+          "BorderSizePixel": 0,
+          "BackgroundColor3": [0.219608, 0.172549, 0.282353],
+          "Active": true
+        }
+      },
+      "PanelRoot": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0.5, 0.5],
+          "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+          "Size": {"UDim2": [[0.91, 0], [0.86, 0]]},
+          "BackgroundTransparency": 0,
+          "BorderSizePixel": 0,
+          "BackgroundColor3": [1.0, 0.980392, 0.94902],
+          "ZIndex": 2
+        },
+        "Aspect": {
+          "$className": "UIAspectRatioConstraint",
+          "$properties": {
+            "AspectRatio": 1.75
+          }
+        },
+        "MotionScale": {
+          "$className": "UIScale",
+          "$properties": {
+            "Scale": 1
+          }
+        },
+        "Corners": {
+          "$className": "UICorner",
+          "$properties": {
+            "CornerRadius": {
+              "UDim": [0, 15]
+            }
+          }
+        },
+        "Rim": {
+          "$className": "UIStroke",
+          "$properties": {
+            "ApplyStrokeMode": "Border",
+            "Color": [0.603922, 0.52549, 0.741176],
+            "Thickness": 2,
+            "LineJoinMode": "Round"
+          }
+        },
+        "Header": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.085, 0]]},
+            "Size": {"UDim2": [[0.965, 0], [0.135, 0]]},
+            "BackgroundTransparency": 0,
+            "BorderSizePixel": 0,
+            "BackgroundColor3": [0.917647, 0.898039, 1.0]
+          },
+          "Corners": {
+            "$className": "UICorner",
+            "$properties": {
+              "CornerRadius": {
+                "UDim": [0, 10]
+              }
+            }
+          },
+          "Title": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.485, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.79, 0], [0.66, 0]]},
+              "Text": "小马图鉴",
+              "TextXAlignment": "Left",
+              "TextColor3": [0.32549, 0.262745, 0.415686]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 48,
+                "MinTextSize": 1
+              }
+            }
+          },
+          "Rim": {
+            "$className": "UIStroke",
+            "$properties": {
+              "ApplyStrokeMode": "Border",
+              "Color": [0.603922, 0.52549, 0.741176],
+              "Thickness": 1.5,
+              "LineJoinMode": "Round"
+            }
+          },
+          "Illustration": {
+            "$className": "ImageLabel",
+            "$properties": {
+              "BackgroundTransparency": 1,
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.05, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.072, 0], [0.85, 0]]},
+              "Image": "rbxassetid://81406360991970",
+              "ImageRectSize": [256, 256],
+              "ImageRectOffset": [256, 0],
+              "ScaleType": "Fit"
+            }
+          }
+        },
+        "CloseButton": {
+          "$path": "widgets/panel-close.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.94, 0], [0.083, 0]]},
+            "Size": {"UDim2": [[0.075, 0], [0.092, 0]]}
+          }
+        },
+        "Content": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+            "Size": {"UDim2": [[0.93, 0], [0.64, 0]]},
+            "BackgroundTransparency": 1,
+            "BorderSizePixel": 0
+          },
+          "AreaPicker": {
+            "$className": "Frame",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.322, 0], [0.1, 0]]},
+              "Size": {"UDim2": [[0.62, 0], [0.18, 0]]},
+              "BackgroundTransparency": 1,
+              "BorderSizePixel": 0
+            },
+            "Previous": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.075, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.13, 0], [0.95, 0]]},
+                "LayoutOrder": 1,
+                "BackgroundColor3": [1.0, 0.956863, 0.901961]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "‹",
+                  "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                  "TextColor3": [0.32549, 0.262745, 0.415686]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 30,
+                    "MinTextSize": 1
+                  }
+                }
+              }
+            },
+            "Zone": {
+              "$path": "widgets/panel-label.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.7, 0], [0.68, 0]]},
+                "Text": "01　小马镇",
+                "TextColor3": [0.32549, 0.262745, 0.415686]
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 32,
+                  "MinTextSize": 1
+                }
+              }
+            },
+            "Next": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.925, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.13, 0], [0.95, 0]]},
+                "LayoutOrder": 1,
+                "BackgroundColor3": [1.0, 0.956863, 0.901961]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "›",
+                  "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                  "TextColor3": [0.32549, 0.262745, 0.415686]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 30,
+                    "MinTextSize": 1
+                  }
+                }
+              }
+            }
+          },
+          "Discoveries": {
+            "$className": "ScrollingFrame",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.32, 0], [0.55, 0]]},
+              "Size": {"UDim2": [[0.62, 0], [0.63, 0]]},
+              "BorderSizePixel": 0,
+              "BackgroundTransparency": 0,
+              "BackgroundColor3": [0.956863, 0.941176, 0.980392],
+              "CanvasSize": {"UDim2": [[0, 0], [0, 0]]},
+              "AutomaticCanvasSize": "Y",
+              "ScrollingDirection": "Y",
+              "ScrollBarThickness": 5,
+              "ScrollBarImageColor3": [0.603922, 0.52549, 0.741176]
+            },
+            "Corners": {
+              "$className": "UICorner",
+              "$properties": {
+                "CornerRadius": {
+                  "UDim": [0, 10]
+                }
+              }
+            },
+            "Layout": {
+              "$className": "UIGridLayout",
+              "$properties": {
+                "CellSize": {"UDim2": [[0.22499999999999998, 0], [0.45, 0]]},
+                "CellPadding": {"UDim2": [[0.02, 0], [0.035, 0]]},
+                "HorizontalAlignment": "Center",
+                "SortOrder": "LayoutOrder",
+                "FillDirectionMaxCells": 4
+              }
+            },
+            "DiscoverySlot": {
+              "$className": "Frame",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[1, 0], [1, 0]]},
+                "BackgroundTransparency": 1,
+                "BorderSizePixel": 0,
+                "Visible": false
+              },
+              "Button": {
+                "$className": "ImageButton",
+                "$properties": {
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                  "Size": {"UDim2": [[0.95, 0], [0.94, 0]]},
+                  "BackgroundTransparency": 0,
+                  "Image": "",
+                  "ScaleType": "Slice",
+                  "SliceCenter": {
+                    "Rect": [
+                      [15, 15],
+                      [176, 216]
+                    ]
+                  },
+                  "SliceScale": 0.5,
+                  "BackgroundColor3": [1.0, 0.980392, 0.94902]
+                },
+                "HoverScale": {
+                  "$className": "UIScale",
+                  "$properties": {
+                    "Scale": 1
+                  }
+                },
+                "Art": {
+                  "$path": "widgets/icon.project.json",
+                  "$properties": {
+                    "AnchorPoint": [0.5, 0.5],
+                    "Position": {"UDim2": [[0.5, 0], [0.38, 0]]},
+                    "Size": {"UDim2": [[0.75, 0], [0.51, 0]]},
+                    "Image": ""
+                  },
+                  "Aspect": {
+                    "$className": "UIAspectRatioConstraint",
+                    "$properties": {
+                      "AspectRatio": 1
+                    }
+                  }
+                },
+                "NameLabel": {
+                  "$path": "widgets/panel-label.project.json",
+                  "$properties": {
+                    "AnchorPoint": [0.5, 0.5],
+                    "Position": {"UDim2": [[0.5, 0], [0.73, 0]]},
+                    "Size": {"UDim2": [[0.91, 0], [0.17, 0]]},
+                    "Text": "未发现",
+                    "TextColor3": [0.388235, 0.337255, 0.415686]
+                  },
+                  "TypeSize": {
+                    "$className": "UITextSizeConstraint",
+                    "$properties": {
+                      "MaxTextSize": 26,
+                      "MinTextSize": 1
+                    }
+                  }
+                },
+                "Detail": {
+                  "$path": "widgets/panel-label.project.json",
+                  "$properties": {
+                    "AnchorPoint": [0.5, 0.5],
+                    "Position": {"UDim2": [[0.5, 0], [0.89, 0]]},
+                    "Size": {"UDim2": [[0.9, 0], [0.12, 0]]},
+                    "Text": "???",
+                    "TextColor3": [0.388235, 0.337255, 0.415686]
+                  },
+                  "TypeSize": {
+                    "$className": "UITextSizeConstraint",
+                    "$properties": {
+                      "MaxTextSize": 26,
+                      "MinTextSize": 1
+                    }
+                  }
+                },
+                "Unknown": {
+                  "$path": "widgets/panel-label.project.json",
+                  "$properties": {
+                    "AnchorPoint": [0.5, 0.5],
+                    "Position": {"UDim2": [[0.5, 0], [0.36, 0]]},
+                    "Size": {"UDim2": [[0.62, 0], [0.46, 0]]},
+                    "Text": "?",
+                    "TextColor3": [0.388235, 0.337255, 0.415686]
+                  },
+                  "TypeSize": {
+                    "$className": "UITextSizeConstraint",
+                    "$properties": {
+                      "MaxTextSize": 26,
+                      "MinTextSize": 1
+                    }
+                  }
+                },
+                "TileBorder": {
+                  "$className": "UIStroke",
+                  "$properties": {
+                    "Color": [0.11, 0.1, 0.14],
+                    "Thickness": 1.5,
+                    "ApplyStrokeMode": "Border"
+                  }
+                },
+                "Corners": {
+                  "$className": "UICorner",
+                  "$properties": {
+                    "CornerRadius": {
+                      "UDim": [0, 8]
+                    }
+                  }
+                },
+                "Rim": {
+                  "$className": "UIStroke",
+                  "$properties": {
+                    "ApplyStrokeMode": "Border",
+                    "Color": [0.603922, 0.52549, 0.741176],
+                    "Thickness": 1.5,
+                    "LineJoinMode": "Round"
+                  }
+                }
+              }
+            },
+            "Rim": {
+              "$className": "UIStroke",
+              "$properties": {
+                "ApplyStrokeMode": "Border",
+                "Color": [0.603922, 0.52549, 0.741176],
+                "Thickness": 1.5,
+                "LineJoinMode": "Round"
+              }
+            }
+          },
+          "Detail": {
+            "$className": "Frame",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.823, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.32, 0], [1, 0]]},
+              "BackgroundTransparency": 0,
+              "BorderSizePixel": 0,
+              "BackgroundColor3": [0.956863, 0.941176, 0.980392]
+            },
+            "Portrait": {
+              "$path": "widgets/icon.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.3, 0]]},
+                "Size": {"UDim2": [[0.69, 0], [0.45, 0]]},
+                "Image": ""
+              },
+              "Aspect": {
+                "$className": "UIAspectRatioConstraint",
+                "$properties": {
+                  "AspectRatio": 1
+                }
+              }
+            },
+            "Unknown": {
+              "$className": "Frame",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                "Size": {"UDim2": [[0.47, 0], [0.39, 0]]},
+                "BackgroundTransparency": 0,
+                "BorderSizePixel": 0,
+                "BackgroundColor3": [0.894118, 0.843137, 0.945098]
+              },
+              "Aspect": {
+                "$className": "UIAspectRatioConstraint",
+                "$properties": {
+                  "AspectRatio": 1
+                }
+              },
+              "Corners": {
+                "$className": "UICorner",
+                "$properties": {
+                  "CornerRadius": {
+                    "UDim": [0, 12]
+                  }
+                }
+              },
+              "Caption": {
+                "$path": "widgets/panel-label.project.json",
+                "$properties": {
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                  "Size": {"UDim2": [[0.88, 0], [0.7, 0]]},
+                  "Text": "?",
+                  "TextColor3": [0.466667, 0.341176, 0.560784]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 68,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Rim": {
+                "$className": "UIStroke",
+                "$properties": {
+                  "ApplyStrokeMode": "Border",
+                  "Color": [0.729412, 0.623529, 0.803922],
+                  "Thickness": 1.5,
+                  "LineJoinMode": "Round"
+                }
+              }
+            },
+            "Species": {
+              "$path": "widgets/panel-label.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.56, 0]]},
+                "Size": {"UDim2": [[0.85, 0], [0.12, 0]]},
+                "Text": "未发现",
+                "TextColor3": [0.32549, 0.262745, 0.415686]
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 32,
+                  "MinTextSize": 1
+                }
+              }
+            },
+            "Rarity": {
+              "$path": "widgets/panel-label.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.72, 0]]},
+                "Size": {"UDim2": [[0.86, 0], [0.1, 0]]},
+                "Text": "稀有度　—",
+                "TextColor3": [0.388235, 0.337255, 0.415686]
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 26,
+                  "MinTextSize": 1
+                }
+              }
+            },
+            "Rate": {
+              "$path": "widgets/panel-label.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.87, 0]]},
+                "Size": {"UDim2": [[0.9, 0], [0.1, 0]]},
+                "Text": "每秒收益　—",
+                "TextColor3": [0.32549, 0.262745, 0.415686]
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 26,
+                  "MinTextSize": 1
+                }
+              }
+            },
+            "Corners": {
+              "$className": "UICorner",
+              "$properties": {
+                "CornerRadius": {
+                  "UDim": [0, 10]
+                }
+              }
+            },
+            "Rim": {
+              "$className": "UIStroke",
+              "$properties": {
+                "ApplyStrokeMode": "Border",
+                "Color": [0.603922, 0.52549, 0.741176],
+                "Thickness": 1.5,
+                "LineJoinMode": "Round"
+              }
+            }
+          },
+          "Progress": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.32, 0], [0.94, 0]]},
+              "Size": {"UDim2": [[0.5, 0], [0.09, 0]]},
+              "Text": "本区 0 / 8",
+              "TextColor3": [0.32549, 0.262745, 0.415686]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 32,
+                "MinTextSize": 1
+              }
+            }
+          }
+        },
+        "Actions": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.902, 0]]},
+            "Size": {"UDim2": [[0.93, 0], [0.105, 0]]},
+            "BackgroundTransparency": 1,
+            "BorderSizePixel": 0
+          },
+          "Layout": {
+            "$className": "UIListLayout",
+            "$properties": {
+              "FillDirection": "Horizontal",
+              "HorizontalAlignment": "Center",
+              "VerticalAlignment": "Center",
+              "SortOrder": "LayoutOrder",
+              "Padding": {
+                "UDim": [0.016, 0]
+              }
+            }
+          },
+          "Count": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.22, 0], [0.7, 0]]},
+              "Text": "已发现 0 / 96",
+              "LayoutOrder": 1,
+              "TextColor3": [0.32549, 0.262745, 0.415686]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 32,
+                "MinTextSize": 1
+              }
+            }
+          },
+          "Map": {
+            "$path": "widgets/panel-action.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.23, 0], [0.85, 0]]},
+              "LayoutOrder": 2,
+              "BackgroundColor3": [1.0, 0.956863, 0.901961]
+            },
+            "Caption": {
+              "$path": "widgets/plain-label.project.json",
+              "$properties": {
+                "Text": "查看区域",
+                "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                "TextColor3": [0.32549, 0.262745, 0.415686]
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 30,
+                  "MinTextSize": 1
+                }
+              }
+            }
+          },
+          "Reward": {
+            "$path": "widgets/panel-action.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.34, 0], [0.85, 0]]},
+              "LayoutOrder": 3,
+              "BackgroundColor3": [0.917647, 0.898039, 1.0]
+            },
+            "Caption": {
+              "$path": "widgets/plain-label.project.json",
+              "$properties": {
+                "Text": "领取区域奖励",
+                "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                "TextColor3": [0.32549, 0.262745, 0.415686]
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 30,
+                  "MinTextSize": 1
+                }
+              }
+            }
+          },
+          "RewardHint": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.14, 0], [0.52, 0]]},
+              "Text": "金币 · 速度",
+              "LayoutOrder": 4,
+              "TextColor3": [0.388235, 0.337255, 0.415686]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 26,
+                "MinTextSize": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

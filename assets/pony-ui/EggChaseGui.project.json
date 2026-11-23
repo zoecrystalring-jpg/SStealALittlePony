@@ -1,0 +1,289 @@
+{
+  "name": "EggChaseGui",
+  "tree": {
+    "$className": "ScreenGui",
+    "$properties": {
+      "ResetOnSpawn": false,
+      "Enabled": false,
+      "DisplayOrder": 20,
+      "ScreenInsets": "None",
+      "ZIndexBehavior": "Sibling"
+    },
+    "TopLeft": {
+      "$className": "Frame",
+      "$properties": {
+        "Active": false,
+        "Size": {
+          "UDim2": [
+            [
+              0.5,
+              0
+            ],
+            [
+              0.5,
+              0
+            ]
+          ]
+        },
+        "Position": {
+          "UDim2": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        "BorderSizePixel": 0,
+        "BackgroundColor3": [
+          0.82,
+          0.027,
+          0.075
+        ],
+        "BackgroundTransparency": 0.42
+      },
+      "Falloff": {
+        "$className": "UIGradient",
+        "$properties": {
+          "Rotation": 45,
+          "Transparency": {
+            "NumberSequence": {
+              "keypoints": [
+                {
+                  "time": 0,
+                  "value": 0,
+                  "envelope": 0
+                },
+                {
+                  "time": 0.18,
+                  "value": 0.32,
+                  "envelope": 0
+                },
+                {
+                  "time": 0.47,
+                  "value": 1,
+                  "envelope": 0
+                },
+                {
+                  "time": 1,
+                  "value": 1,
+                  "envelope": 0
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "TopRight": {
+      "$className": "Frame",
+      "$properties": {
+        "Active": false,
+        "Size": {
+          "UDim2": [
+            [
+              0.5,
+              0
+            ],
+            [
+              0.5,
+              0
+            ]
+          ]
+        },
+        "Position": {
+          "UDim2": [
+            [
+              0.5,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        "BorderSizePixel": 0,
+        "BackgroundColor3": [
+          0.82,
+          0.027,
+          0.075
+        ],
+        "BackgroundTransparency": 0.42
+      },
+      "Falloff": {
+        "$className": "UIGradient",
+        "$properties": {
+          "Rotation": 135,
+          "Transparency": {
+            "NumberSequence": {
+              "keypoints": [
+                {
+                  "time": 0,
+                  "value": 0,
+                  "envelope": 0
+                },
+                {
+                  "time": 0.18,
+                  "value": 0.32,
+                  "envelope": 0
+                },
+                {
+                  "time": 0.47,
+                  "value": 1,
+                  "envelope": 0
+                },
+                {
+                  "time": 1,
+                  "value": 1,
+                  "envelope": 0
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "BottomLeft": {
+      "$className": "Frame",
+      "$properties": {
+        "Active": false,
+        "Size": {
+          "UDim2": [
+            [
+              0.5,
+              0
+            ],
+            [
+              0.5,
+              0
+            ]
+          ]
+        },
+        "Position": {
+          "UDim2": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              0
+            ]
+          ]
+        },
+        "BorderSizePixel": 0,
+        "BackgroundColor3": [
+          0.82,
+          0.027,
+          0.075
+        ],
+        "BackgroundTransparency": 0.42
+      },
+      "Falloff": {
+        "$className": "UIGradient",
+        "$properties": {
+          "Rotation": -45,
+          "Transparency": {
+            "NumberSequence": {
+              "keypoints": [
+                {
+                  "time": 0,
+                  "value": 0,
+                  "envelope": 0
+                },
+                {
+                  "time": 0.18,
+                  "value": 0.32,
+                  "envelope": 0
+                },
+                {
+                  "time": 0.47,
+                  "value": 1,
+                  "envelope": 0
+                },
+                {
+                  "time": 1,
+                  "value": 1,
+                  "envelope": 0
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "BottomRight": {
+      "$className": "Frame",
+      "$properties": {
+        "Active": false,
+        "Size": {
+          "UDim2": [
+            [
+              0.5,
+              0
+            ],
+            [
+              0.5,
+              0
+            ]
+          ]
+        },
+        "Position": {
+          "UDim2": [
+            [
+              0.5,
+              0
+            ],
+            [
+              0.5,
+              0
+            ]
+          ]
+        },
+        "BorderSizePixel": 0,
+        "BackgroundColor3": [
+          0.82,
+          0.027,
+          0.075
+        ],
+        "BackgroundTransparency": 0.42
+      },
+      "Falloff": {
+        "$className": "UIGradient",
+        "$properties": {
+          "Rotation": -135,
+          "Transparency": {
+            "NumberSequence": {
+              "keypoints": [
+                {
+                  "time": 0,
+                  "value": 0,
+                  "envelope": 0
+                },
+                {
+                  "time": 0.18,
+                  "value": 0.32,
+                  "envelope": 0
+                },
+                {
+                  "time": 0.47,
+                  "value": 1,
+                  "envelope": 0
+                },
+                {
+                  "time": 1,
+                  "value": 1,
+                  "envelope": 0
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

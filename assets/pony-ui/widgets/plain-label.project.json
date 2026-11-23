@@ -1,0 +1,47 @@
+{
+  "name": "PlainLabel",
+  "tree": {
+    "$className": "TextLabel",
+    "$properties": {
+      "BackgroundTransparency": 1,
+      "AnchorPoint": [
+        0.5,
+        0.5
+      ],
+      "Position": {
+        "UDim2": [
+          [
+            0.5,
+            0
+          ],
+          [
+            0.5,
+            0
+          ]
+        ]
+      },
+      "Size": {
+        "UDim2": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "Font": "GothamBold",
+      "TextColor3": [
+        1,
+        1,
+        1
+      ],
+      "TextScaled": true,
+      "TextWrapped": true,
+      "Text": "",
+      "BorderSizePixel": 0
+    }
+  }
+}

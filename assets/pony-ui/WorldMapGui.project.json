@@ -1,0 +1,993 @@
+{
+  "name": "WorldMapGui",
+  "tree": {
+    "$className": "ScreenGui",
+    "$properties": {
+      "Enabled": false,
+      "DisplayOrder": 30,
+      "ResetOnSpawn": false,
+      "ScreenInsets": "CoreUISafeInsets",
+      "ZIndexBehavior": "Sibling"
+    },
+    "CanvasGroup": {
+      "$className": "CanvasGroup",
+      "$properties": {
+        "AnchorPoint": [0.5, 0.5],
+        "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+        "Size": {"UDim2": [[1, 0], [1, 0]]},
+        "BackgroundTransparency": 1
+      },
+      "Scrim": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0.5, 0.5],
+          "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+          "Size": {"UDim2": [[1, 0], [1, 0]]},
+          "BackgroundTransparency": 0.38,
+          "BorderSizePixel": 0,
+          "BackgroundColor3": [0.219608, 0.172549, 0.282353],
+          "Active": true
+        }
+      },
+      "PanelRoot": {
+        "$className": "Frame",
+        "$properties": {
+          "AnchorPoint": [0.5, 0.5],
+          "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+          "Size": {"UDim2": [[0.91, 0], [0.86, 0]]},
+          "BackgroundTransparency": 0,
+          "BorderSizePixel": 0,
+          "BackgroundColor3": [1.0, 0.980392, 0.94902],
+          "ZIndex": 2
+        },
+        "Aspect": {
+          "$className": "UIAspectRatioConstraint",
+          "$properties": {
+            "AspectRatio": 1.75
+          }
+        },
+        "MotionScale": {
+          "$className": "UIScale",
+          "$properties": {
+            "Scale": 1
+          }
+        },
+        "Corners": {
+          "$className": "UICorner",
+          "$properties": {
+            "CornerRadius": {
+              "UDim": [0, 15]
+            }
+          }
+        },
+        "Rim": {
+          "$className": "UIStroke",
+          "$properties": {
+            "ApplyStrokeMode": "Border",
+            "Color": [0.52549, 0.662745, 0.709804],
+            "Thickness": 2,
+            "LineJoinMode": "Round"
+          }
+        },
+        "Header": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.085, 0]]},
+            "Size": {"UDim2": [[0.965, 0], [0.135, 0]]},
+            "BackgroundTransparency": 0,
+            "BorderSizePixel": 0,
+            "BackgroundColor3": [0.862745, 0.937255, 0.960784]
+          },
+          "Corners": {
+            "$className": "UICorner",
+            "$properties": {
+              "CornerRadius": {
+                "UDim": [0, 10]
+              }
+            }
+          },
+          "Title": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.485, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.79, 0], [0.66, 0]]},
+              "Text": "全场地图",
+              "TextXAlignment": "Left",
+              "TextColor3": [0.223529, 0.34902, 0.4]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 48,
+                "MinTextSize": 1
+              }
+            }
+          },
+          "Rim": {
+            "$className": "UIStroke",
+            "$properties": {
+              "ApplyStrokeMode": "Border",
+              "Color": [0.52549, 0.662745, 0.709804],
+              "Thickness": 1.5,
+              "LineJoinMode": "Round"
+            }
+          },
+          "Illustration": {
+            "$className": "ImageLabel",
+            "$properties": {
+              "BackgroundTransparency": 1,
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.05, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.072, 0], [0.85, 0]]},
+              "Image": "https://assetdelivery.roblox.com/v1/asset/?id=121679571145091",
+              "ImageRectSize": [256, 256],
+              "ImageRectOffset": [256, 256],
+              "ScaleType": "Fit"
+            }
+          }
+        },
+        "CloseButton": {
+          "$path": "widgets/panel-close.project.json",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.94, 0], [0.083, 0]]},
+            "Size": {"UDim2": [[0.075, 0], [0.092, 0]]}
+          }
+        },
+        "Content": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+            "Size": {"UDim2": [[0.93, 0], [0.64, 0]]},
+            "BackgroundTransparency": 1,
+            "BorderSizePixel": 0
+          },
+          "Yards": {
+            "$className": "Frame",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.13, 0]]},
+              "Size": {"UDim2": [[0.98, 0], [0.21, 0]]},
+              "BackgroundTransparency": 1,
+              "BorderSizePixel": 0
+            },
+            "Layout": {
+              "$className": "UIListLayout",
+              "$properties": {
+                "FillDirection": "Horizontal",
+                "HorizontalAlignment": "Center",
+                "VerticalAlignment": "Center",
+                "SortOrder": "LayoutOrder",
+                "Padding": {
+                  "UDim": [0.008, 0]
+                }
+              }
+            },
+            "H1": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.115, 0], [0.88, 0]]},
+                "LayoutOrder": 1,
+                "BackgroundColor3": [0.909804, 0.941176, 0.878431]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "围栏 01",
+                  "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 30,
+                    "MinTextSize": 1
+                  }
+                }
+              }
+            },
+            "H2": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.115, 0], [0.88, 0]]},
+                "LayoutOrder": 2,
+                "BackgroundColor3": [0.909804, 0.941176, 0.878431]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "围栏 02",
+                  "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 30,
+                    "MinTextSize": 1
+                  }
+                }
+              }
+            },
+            "H3": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.115, 0], [0.88, 0]]},
+                "LayoutOrder": 3,
+                "BackgroundColor3": [0.909804, 0.941176, 0.878431]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "围栏 03",
+                  "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 30,
+                    "MinTextSize": 1
+                  }
+                }
+              }
+            },
+            "H4": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.115, 0], [0.88, 0]]},
+                "LayoutOrder": 4,
+                "BackgroundColor3": [0.909804, 0.941176, 0.878431]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "围栏 04",
+                  "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 30,
+                    "MinTextSize": 1
+                  }
+                }
+              }
+            },
+            "H5": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.115, 0], [0.88, 0]]},
+                "LayoutOrder": 5,
+                "BackgroundColor3": [0.909804, 0.941176, 0.878431]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "围栏 05",
+                  "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 30,
+                    "MinTextSize": 1
+                  }
+                }
+              }
+            },
+            "H6": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.115, 0], [0.88, 0]]},
+                "LayoutOrder": 6,
+                "BackgroundColor3": [0.909804, 0.941176, 0.878431]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "围栏 06",
+                  "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 30,
+                    "MinTextSize": 1
+                  }
+                }
+              }
+            },
+            "H7": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.115, 0], [0.88, 0]]},
+                "LayoutOrder": 7,
+                "BackgroundColor3": [0.909804, 0.941176, 0.878431]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "围栏 07",
+                  "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 30,
+                    "MinTextSize": 1
+                  }
+                }
+              }
+            },
+            "H8": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.115, 0], [0.88, 0]]},
+                "LayoutOrder": 8,
+                "BackgroundColor3": [0.909804, 0.941176, 0.878431]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "围栏 08",
+                  "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4]
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 30,
+                    "MinTextSize": 1
+                  }
+                }
+              }
+            }
+          },
+          "Threshold": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.36, 0]]},
+              "Size": {"UDim2": [[0.97, 0], [0.12, 0]]},
+              "Text": "家园围栏　↔　公共广场　↔　安全线　↔　野外跑道",
+              "TextColor3": [0.388235, 0.337255, 0.415686]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 26,
+                "MinTextSize": 1
+              }
+            }
+          },
+          "FirstSix": {
+            "$className": "Frame",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.56, 0]]},
+              "Size": {"UDim2": [[1, 0], [0.2, 0]]},
+              "BackgroundTransparency": 1,
+              "BorderSizePixel": 0
+            },
+            "Layout": {
+              "$className": "UIListLayout",
+              "$properties": {
+                "FillDirection": "Horizontal",
+                "HorizontalAlignment": "Center",
+                "VerticalAlignment": "Center",
+                "SortOrder": "LayoutOrder",
+                "Padding": {
+                  "UDim": [0.012, 0]
+                }
+              }
+            },
+            "Z01": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 1,
+                "BackgroundColor3": [0.890196, 0.941176, 0.85098]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "01 小马镇",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [0, 0],
+                  "ScaleType": "Fit"
+                }
+              }
+            },
+            "Z02": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 2,
+                "BackgroundColor3": [0.984314, 0.890196, 0.784314]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "02 甜苹果庄园",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [256, 0],
+                  "ScaleType": "Fit"
+                }
+              }
+            },
+            "Z03": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 3,
+                "BackgroundColor3": [0.972549, 0.878431, 0.929412]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "03 音乐庆典街",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [512, 0],
+                  "ScaleType": "Fit"
+                }
+              }
+            },
+            "Z04": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 4,
+                "BackgroundColor3": [0.870588, 0.941176, 0.984314]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "04 云中城赛场",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [768, 0],
+                  "ScaleType": "Fit"
+                }
+              }
+            },
+            "Z05": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 5,
+                "BackgroundColor3": [0.917647, 0.878431, 0.980392]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "05 星光魔法学院",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [0, 256],
+                  "ScaleType": "Fit"
+                }
+              }
+            },
+            "Z06": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 6,
+                "BackgroundColor3": [0.858824, 0.933333, 0.862745]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "06 永恒魔法森林",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [256, 256],
+                  "ScaleType": "Fit"
+                }
+              }
+            }
+          },
+          "LastSix": {
+            "$className": "Frame",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.8, 0]]},
+              "Size": {"UDim2": [[1, 0], [0.2, 0]]},
+              "BackgroundTransparency": 1,
+              "BorderSizePixel": 0
+            },
+            "Layout": {
+              "$className": "UIListLayout",
+              "$properties": {
+                "FillDirection": "Horizontal",
+                "HorizontalAlignment": "Center",
+                "VerticalAlignment": "Center",
+                "SortOrder": "LayoutOrder",
+                "Padding": {
+                  "UDim": [0.012, 0]
+                }
+              }
+            },
+            "Z07": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 7,
+                "BackgroundColor3": [0.858824, 0.945098, 0.941176]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "07 珊瑚海王国",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [512, 256],
+                  "ScaleType": "Fit"
+                }
+              }
+            },
+            "Z08": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 8,
+                "BackgroundColor3": [0.894118, 0.913725, 0.988235]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "08 水晶帝国",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [768, 256],
+                  "ScaleType": "Fit"
+                }
+              }
+            },
+            "Z09": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 9,
+                "BackgroundColor3": [0.901961, 0.870588, 0.960784]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "09 月影梦境城",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [0, 512],
+                  "ScaleType": "Fit"
+                }
+              }
+            },
+            "Z10": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 10,
+                "BackgroundColor3": [0.968627, 0.87451, 0.831373]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "10 龙焰与虫巢",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [256, 512],
+                  "ScaleType": "Fit"
+                }
+              }
+            },
+            "Z11": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 11,
+                "BackgroundColor3": [0.976471, 0.929412, 0.807843]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "11 皇家传奇殿堂",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [512, 512],
+                  "ScaleType": "Fit"
+                }
+              }
+            },
+            "Z12": {
+              "$path": "widgets/panel-action.project.json",
+              "$properties": {
+                "AnchorPoint": [0.5, 0.5],
+                "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+                "Size": {"UDim2": [[0.153, 0], [0.94, 0]]},
+                "LayoutOrder": 12,
+                "BackgroundColor3": [0.933333, 0.878431, 0.988235]
+              },
+              "Caption": {
+                "$path": "widgets/plain-label.project.json",
+                "$properties": {
+                  "Text": "12 和谐星辉圣域",
+                  "Size": {"UDim2": [[0.93, 0], [0.3, 0]]},
+                  "TextColor3": [0.223529, 0.34902, 0.4],
+                  "Position": {"UDim2": [[0.5, 0], [0.77, 0]]}
+                },
+                "TypeSize": {
+                  "$className": "UITextSizeConstraint",
+                  "$properties": {
+                    "MaxTextSize": 23,
+                    "MinTextSize": 1
+                  }
+                }
+              },
+              "Illustration": {
+                "$className": "ImageLabel",
+                "$properties": {
+                  "BackgroundTransparency": 1,
+                  "AnchorPoint": [0.5, 0.5],
+                  "Position": {"UDim2": [[0.5, 0], [0.31, 0]]},
+                  "Size": {"UDim2": [[0.78, 0], [0.5, 0]]},
+                  "Image": "rbxassetid://80791918172185",
+                  "ImageRectSize": [256, 256],
+                  "ImageRectOffset": [768, 512],
+                  "ScaleType": "Fit"
+                }
+              }
+            }
+          }
+        },
+        "Actions": {
+          "$className": "Frame",
+          "$properties": {
+            "AnchorPoint": [0.5, 0.5],
+            "Position": {"UDim2": [[0.5, 0], [0.902, 0]]},
+            "Size": {"UDim2": [[0.93, 0], [0.105, 0]]},
+            "BackgroundTransparency": 1,
+            "BorderSizePixel": 0
+          },
+          "Layout": {
+            "$className": "UIListLayout",
+            "$properties": {
+              "FillDirection": "Horizontal",
+              "HorizontalAlignment": "Center",
+              "VerticalAlignment": "Center",
+              "SortOrder": "LayoutOrder",
+              "Padding": {
+                "UDim": [0.016, 0]
+              }
+            }
+          },
+          "Selection": {
+            "$path": "widgets/panel-label.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.52, 0], [0.75, 0]]},
+              "Text": "01 小马镇　·　蝎尾狮　·　8 款小马",
+              "LayoutOrder": 1,
+              "TextColor3": [0.388235, 0.337255, 0.415686]
+            },
+            "TypeSize": {
+              "$className": "UITextSizeConstraint",
+              "$properties": {
+                "MaxTextSize": 26,
+                "MinTextSize": 1
+              }
+            }
+          },
+          "Index": {
+            "$path": "widgets/panel-action.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.24, 0], [0.88, 0]]},
+              "LayoutOrder": 2,
+              "BackgroundColor3": [1.0, 0.956863, 0.901961]
+            },
+            "Caption": {
+              "$path": "widgets/plain-label.project.json",
+              "$properties": {
+                "Text": "本区图鉴",
+                "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                "TextColor3": [0.223529, 0.34902, 0.4]
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 30,
+                  "MinTextSize": 1
+                }
+              }
+            }
+          },
+          "Locate": {
+            "$path": "widgets/panel-action.project.json",
+            "$properties": {
+              "AnchorPoint": [0.5, 0.5],
+              "Position": {"UDim2": [[0.5, 0], [0.5, 0]]},
+              "Size": {"UDim2": [[0.19, 0], [0.88, 0]]},
+              "LayoutOrder": 3,
+              "BackgroundColor3": [0.862745, 0.937255, 0.960784]
+            },
+            "Caption": {
+              "$path": "widgets/plain-label.project.json",
+              "$properties": {
+                "Text": "我的围栏",
+                "Size": {"UDim2": [[0.86, 0], [0.62, 0]]},
+                "TextColor3": [0.223529, 0.34902, 0.4]
+              },
+              "TypeSize": {
+                "$className": "UITextSizeConstraint",
+                "$properties": {
+                  "MaxTextSize": 30,
+                  "MinTextSize": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

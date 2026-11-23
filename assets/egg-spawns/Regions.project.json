@@ -1,0 +1,211 @@
+{
+  "name": "Regions",
+  "tree": {
+    "$className": "Folder",
+    "$ignoreUnknownInstances": true,
+    "Region01": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 1,
+        "MinX": 156,
+        "MaxX": 348,
+        "DisplayName": "小马镇"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region01.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region01Guardian.rbxm"
+      }
+    },
+    "Region02": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 2,
+        "MinX": 348,
+        "MaxX": 540,
+        "DisplayName": "甜苹果庄园"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region02.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region02Guardian.rbxm"
+      }
+    },
+    "Region03": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 3,
+        "MinX": 540,
+        "MaxX": 732,
+        "DisplayName": "音乐庆典街"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region03.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region03Guardian.rbxm"
+      }
+    },
+    "Region04": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 4,
+        "MinX": 732,
+        "MaxX": 924,
+        "DisplayName": "云中城赛场"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region04.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region04Guardian.rbxm"
+      }
+    },
+    "Region05": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 5,
+        "MinX": 924,
+        "MaxX": 1116,
+        "DisplayName": "星光魔法学院"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region05.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region05Guardian.rbxm"
+      }
+    },
+    "Region06": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 6,
+        "MinX": 1116,
+        "MaxX": 1308,
+        "DisplayName": "永恒魔法森林"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region06.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region06Guardian.rbxm"
+      }
+    },
+    "Region07": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 7,
+        "MinX": 1308,
+        "MaxX": 1500,
+        "DisplayName": "珊瑚海王国"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region07.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region07Guardian.rbxm"
+      }
+    },
+    "Region08": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 8,
+        "MinX": 1500,
+        "MaxX": 1692,
+        "DisplayName": "水晶帝国"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region08.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region08Guardian.rbxm"
+      }
+    },
+    "Region09": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 9,
+        "MinX": 1692,
+        "MaxX": 1884,
+        "DisplayName": "月影梦境城"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region09.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region09Guardian.rbxm"
+      }
+    },
+    "Region10": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 10,
+        "MinX": 1884,
+        "MaxX": 2076,
+        "DisplayName": "龙焰与虫巢"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region10.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region10Guardian.rbxm"
+      }
+    },
+    "Region11": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 11,
+        "MinX": 2076,
+        "MaxX": 2268,
+        "DisplayName": "皇家传奇殿堂"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region11.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region11Guardian.rbxm"
+      }
+    },
+    "Region12": {
+      "$className": "Model",
+      "$attributes": {
+        "FieldWidth": 144,
+        "RegionId": 12,
+        "MinX": 2268,
+        "MaxX": 2460,
+        "DisplayName": "和谐星辉圣域"
+      },
+      "$ignoreUnknownInstances": true,
+      "EggNests": {
+        "$path": "Region12.rbxm"
+      },
+      "Guardian": {
+        "$path": "Region12Guardian.rbxm"
+      }
+    }
+  }
+}
